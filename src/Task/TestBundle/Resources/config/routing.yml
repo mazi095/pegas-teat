@@ -1,0 +1,5 @@
+
+_task_test:
+    resource: "@TaskTestBundle/Controller/DefaultController.php"
+    type:     annotation
+#    prefix:   /test

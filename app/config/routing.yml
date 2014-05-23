@@ -1,0 +1,2 @@
+_task_test:
+    resource: "@TaskTestBundle/Resources/config/routing.yml"

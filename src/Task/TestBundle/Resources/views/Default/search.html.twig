@@ -1,0 +1,50 @@
+<script>
+  (function() {
+    var cx = '004097743821222638292:2mfodbd83vg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<!--<gcse:search></gcse:search>-->
+<form action="{{ path('task_pegas') }}" method="get" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit" />
+</form>
+<div>
+    <h3>Google/Yandex</h3>
+    <ul>
+    {% for key, item in data.general %}
+        <li>
+            <a href="{{key}}">{{item.title}}</a>
+            <strong>{{item.content}}</strong>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+<div>
+    <h3>Google</h3>
+    <ul>
+    {% for key, item in data.google %}
+        <li>
+            <a href="{{key}}">{{item.title}}</a>
+            <strong>{{item.content}}</strong>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+<div>
+    <h3>Yandex</h3>
+    <ul>
+    {% for key, item in data.yandex %}
+        <li>
+            <a href="{{key}}">{{item.title}}</a>
+            <strong>{{item.content}}</strong>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
