@@ -32,8 +32,6 @@ class DefaultController extends Controller
       ->getForm();
     if ($request->query->get('form')) {
       $form->bind($request);
-      if ($form->isValid()) {
-      }
     }
     return $this->render('TaskTestBundle:Default:search.html.twig', array(
       'form' => $form->createView(),
